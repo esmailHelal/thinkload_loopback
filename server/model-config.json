@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "bookdb"
+  },
+  "AccessToken": {
+    "dataSource": "bookdb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "bookdb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "bookdb",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "bookdb",
+    "public": false
+  },
+  "book": {
+    "dataSource": "bookdb",
+    "public": true
+  }
+}
